@@ -1,0 +1,6 @@
+backend/db
+data
+dev
+.ipynb_checkpoints
+code/send_email.py
+demo.webm

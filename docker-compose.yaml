@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  frontend:
+    build: frontend
+    ports:
+      - 8501:8501
+    volumes:
+      - type: bind
+        source: "/Director Dealings/"
+        target: /usr/src/
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
+      POSTGRES_DB: directors
+    ports:
+      - 5432:5432
+    volumes:
+      - type: bind
+        source: "/Director Dealings/backend/db"
+        target: /var/lib/postgresql/data
+  api:
+    build: backend/api
+    ports:
+      - 8080:8080
+    volumes:
+      - type: bind
+        source: "/Director Dealings/"
+        target: /usr/src/
+  dev:
+    build: dev
+    ports:
+      - 8888:8888
+    volumes:
+      - type: bind
+        source: "/Director Dealings/"
+        target: /usr/src/

@@ -1,0 +1,6 @@
+# frontend/requirements.txt
+
+streamlit
+aiohttp
+plotly
+pandas

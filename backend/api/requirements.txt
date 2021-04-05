@@ -1,0 +1,9 @@
+# backend/requirements.txt
+
+fastapi
+uvicorn
+pandas
+beautifulsoup4
+psycopg2-binary
+requests
+selenium
